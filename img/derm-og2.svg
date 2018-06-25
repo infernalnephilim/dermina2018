@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:6;stroke-linecap:square;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#FFFFFF;stroke-width:6;stroke-miterlimit:10;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="10.8642" y1="256" x2="505.8642" y2="256">
+	<stop  offset="0" style="stop-color:#83CC3F"/>
+	<stop  offset="1" style="stop-color:#C6DC5E"/>
+</linearGradient>
+<circle class="st0" cx="258.4" cy="256" r="247.5"/>
+<g>
+	<g>
+		<path class="st1" d="M373.8,191.3c9.4,0,17.1,7.7,17.1,17.1v145.8c0,9.4-7.7,17.1-17.1,17.1H143c-9.4,0-17.1-7.7-17.1-17.1V208.4
+			c0-9.4,7.7-17.1,17.1-17.1H373.8 M373.8,176.3H143c-17.7,0-32.1,14.4-32.1,32.1v145.8c0,17.7,14.4,32.1,32.1,32.1h230.8
+			c17.7,0,32.1-14.4,32.1-32.1V208.4C405.9,190.6,391.5,176.3,373.8,176.3L373.8,176.3z"/>
+	</g>
+	<path class="st2" d="M271.2,177.8c18.8,0,37.6,0.2,56.4,0.4c0.4-1,0.6-2.1,0.6-3.3v-22.3c0-5.2-4.2-9.4-9.3-9.4H197.8
+		c-5.1,0-9.3,4.2-9.3,9.4V175c0,1.1,0.2,2.1,0.5,3.1C216.4,179.4,243.8,177.8,271.2,177.8z"/>
+	<path class="st3" d="M385.9,229.4c5.4,0,10.7-0.1,16.1-0.2"/>
+	<path class="st3" d="M186.3,229.8c48.1-0.3,96.8-0.3,144.9-0.4"/>
+	<path class="st3" d="M113.4,230.1c6.9,0.2,13.9,0.2,20.8,0"/>
+	<g>
+		<rect x="242.3" y="249.8" class="st4" width="31.3" height="105"/>
+		
+			<rect x="241.8" y="250.5" transform="matrix(6.123234e-017 -1 1 6.123234e-017 -44.5844 560.0187)" class="st4" width="31.7" height="103.5"/>
+	</g>
+	<path class="st5" d="M173.1,242.1h-25.5c-6.6,0-12-5.4-12-12v-0.3c0-6.6,5.4-12,12-12h25.5c6.6,0,12,5.4,12,12v0.3
+		C185.1,236.7,179.7,242.1,173.1,242.1z"/>
+	<path class="st5" d="M370.8,241.5h-25.5c-6.6,0-12-5.4-12-12v-0.3c0-6.6,5.4-12,12-12h25.5c6.6,0,12,5.4,12,12v0.3
+		C382.8,236.1,377.4,241.5,370.8,241.5z"/>
+</g>
+</svg>

@@ -1,0 +1,244 @@
+<script>
+    $(window).on('resize', function () {
+//         if("#mobile_menu").display("block"){
+//             $("#menu").hide();
+//         } else{
+//             $("#menu").show("slide", {
+//                 direction: 'right'
+//             }, "ease", 3000);
+//         }
+        if ($(window).width() > 1080) {
+            $("#menu").show("slide", {
+                direction: 'right'
+            }, "ease", 3000);
+            console.log($(window).width());
+        } else {
+            //$("#menu").hide();
+        }
+    });
+
+    $(function () {
+        if ($(window).width() < 920) {
+           // $("#menu").hide();
+        }
+//        if("#mobile_menu").display("none"){
+//            $("#menu").show("slide", {
+//                direction: 'right'
+//            }, "ease", 3000);
+//        } else{
+//            $("#menu").hide();
+//        }
+        var current = 1;
+
+
+        function podstrony(nr) {
+            $("#podstr" + nr).click(function () {
+
+                $("#podstr" + current).removeClass("aktywny");
+                $("#podstr" + nr).addClass("aktywny");
+
+                $("html, body").animate({
+                    scrollTop: 0
+                }, "slow");
+                if (nr == 2) {
+                    window.location.href = "o-gabinecie";
+                } else if (nr == 3) {
+                    window.location.href = "dermatologia-ogolna";
+                } else if (nr == 4) {
+                    window.location.href = "dermatologia-estetyczna";
+                } else if (nr == 5) {
+                    window.location.href = "trichologia";
+                } else if (nr == 6) {
+                    window.location.href = "kontakt";
+                }
+                current = nr;
+            });
+        }
+
+        $(".podstr1").click(function () {
+
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            window.location.href = "\index";
+            current = 1;
+        });
+
+        podstrony(2);
+        podstrony(3);
+        podstrony(4);
+        podstrony(5);
+        podstrony(6);
+
+
+        $("#mobile_menu").click(function () {
+            //$("#menu").slideToggle();
+        });
+
+        if (window.location.href.indexOf("index") != -1) {
+            $("#podstr1").addClass("aktywny");
+        } else if (window.location.href.indexOf("o-gabinecie") != -1) {
+            $("#podstr2").addClass("aktywny");
+        } else if (window.location.href.indexOf("dermatologia-ogolna") != -1
+                || window.location.href.indexOf("leczenie-chorob-skory") != -1
+                || window.location.href.indexOf("leczenie-chorob-paznokci") != -1
+                || window.location.href.indexOf("elektrokoagulacja") != -1
+                || window.location.href.indexOf("terapia-fotodynamiczna") != -1
+                || window.location.href.indexOf("badanie-mykologiczne") != -1
+                || window.location.href.indexOf("dermoskopia") != -1
+                || window.location.href.indexOf("testy-alergiczne") != -1
+                || window.location.href.indexOf("kriochirurgia") != -1) {
+            $("#podstr3").addClass("aktywny");
+        } else if (window.location.href.indexOf("dermatologia-estetyczna") != -1) {
+            $("#podstr4").addClass("aktywny");
+        } else if (window.location.href.indexOf("peelingi-medyczne") != -1
+                || window.location.href.indexOf("likwidacja-przebarwien") != -1
+                || window.location.href.indexOf("leczenie-nadpotliwosci") != -1
+                || window.location.href.indexOf("wygladzanie-zmarszczek") != -1
+                || window.location.href.indexOf("mezoterapia") != -1) {
+            $("#podstr4").addClass("aktywny");
+        } else if (window.location.href.indexOf("trichologia") != -1
+                || window.location.href.indexOf("uva-uvb-puva") != -1
+                || window.location.href.indexOf("injekcje-tramcinolonu") != -1
+                || window.location.href.indexOf("kriomasaz-skory-glowy") != -1) {
+            $("#podstr5").addClass("aktywny");
+        } else if (window.location.href.indexOf("kontakt") != -1) {
+            $("#podstr6").addClass("aktywny");
+        } else {
+            $("#podstr" + 1).addClass("aktywny");
+        }
+    });
+</script>
+
+<div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <img src="img/menu-icon2.png">
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul id="menu" class="nav navbar-nav">
+            <li id="podstr1" class="podstr1"><h4>Strona główna</h4></li>
+            <li id="podstr2"><h4>O gabinecie</h4></li>
+            <li id="podstr3"><h4>Dermatologia ogólna</h4></li>
+            <li id="podstr4"><h4>Dermatologia estetyczna</h4></li>
+            <li id="podstr5"><h4>Trichologia</h4></li>
+            <li id="podstr6"><h4>Kontakt</h4></li>
+        </ul>
+    </div>
+</div>
+
+<style>
+
+    @media (max-width: 1080px) {
+        .navbar-header {
+            float: none;
+        }
+        .navbar-toggle {
+            display: block;
+        }
+        .navbar-toggle:focus{
+            background: #fff !important;
+        }
+        .navbar-toggle:hover img{
+            border-radius: 5px;
+            background: #eee;
+        }
+
+        .navbar-collapse {
+            border-top: 1px solid transparent;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            padding-right: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        .navbar-collapse.collapse {
+            display: none !important;
+        }
+
+        .navbar-nav {
+            float: none !important;
+            margin-top: 7.5px;
+        }
+
+        .navbar-nav > li {
+            float: none;
+        }
+
+        .navbar-nav > li > a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .collapse.in {
+            display: block !important;
+        }
+        /*********************************************
+        **********************************************/
+
+        #mobile_menu {
+            display: block;
+            text-align: left;
+            z-index: 1002;
+            height: 52px;
+        }
+
+        .navbar-toggle img {
+            margin-top: 5px;
+            margin-bottom: 2px;
+            height: 45px;
+            transition: all .4s ease;
+        }
+
+        #menu {
+            /*display: none;*/
+            position: relative;
+            z-index: 1002;
+            width: 100%;
+            background: #fff;
+
+        }
+
+        #menu li {
+            display: block;
+            border-bottom: 1px solid #eee;
+            padding: 7px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-right: 0 !important;
+        }
+
+        #menu li:nth-child(1) {
+            border-top: 1px solid #eee;
+        }
+
+        #menu li:nth-child(1):hover {
+            box-shadow: inset 60px 0px 0px #c1e76e, inset -60px 0px 0px #83cc3f;
+        }
+
+        #menu li:nth-child(2):hover {
+            box-shadow: inset 60px 0px 0px #c1e76e, inset -60px 0px 0px #83cc3f;
+        }
+
+        #menu li:nth-child(3):hover {
+            box-shadow: inset 60px 0px 0px #c1e76e, inset -60px 0px 0px #83cc3f;
+        }
+
+        #menu li:nth-child(4):hover {
+            box-shadow: inset 60px 0px 0px #c1e76e, inset -60px 0px 0px #83cc3f;
+        }
+
+        #menu li:nth-child(5):hover {
+            box-shadow: inset 60px 0px 0px #c1e76e, inset -60px 0px 0px #83cc3f;
+        }
+
+        #menu li:nth-child(6):hover {
+            box-shadow: inset 60px 0px 0px #c1e76e, inset -60px 0px 0px #83cc3f;
+        }
+
+        .aktywny {
+            box-shadow: inset 20px 0px 0px #83cc3f, inset -20px 0px 0px #c1e76e,;
+        }
+    }
+
+</style>

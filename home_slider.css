@@ -1,0 +1,144 @@
+#home_slider {
+    position: relative;
+    height: inherit;
+    background: url('img/bg2.jpg') no-repeat;
+    background-size: cover;
+}
+
+#home_slider ul {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    list-style-type: none;
+}
+
+#hs {
+    width: 100%;
+    height: inherit;
+}
+
+.slide {
+    width: 100%;
+    height: inherit;
+    margin: auto;
+    text-transform: uppercase;
+    display: none;
+    position: absolute;
+}
+
+#slide1 {
+    display: block;
+    z-index: 100;
+}
+#slide1 p, #slide2 p{
+    z-index: 2000;
+}
+#slide1_p1 span{
+    font-size: 160%;
+}
+
+.slide_img {
+    min-height: 450px;
+    max-height: 600px;
+    position: absolute;
+    top: -50px;
+}
+
+#slide1_img2, #slide2_img3{
+   left: 20%;
+}
+
+.slide_p1 {
+    font-size: 300%;
+    color: #fff;
+    padding: 10px;
+    margin-top: 80px;
+    text-align: left;
+
+}
+
+.slide_p1 span {
+    background: rgba(256, 256, 256, 0.2);
+    padding: 10px 40px;
+}
+
+.slide_p2 {
+    min-height: 80px !important;
+    width: 100%;
+    color: #fff;
+    padding: 25px;
+    font-size: 1.3em;
+    text-shadow: #000 1px 1px 1px;
+}
+
+.slide_p2 span {
+    margin-left: 40px;
+}
+
+#slide2, #slide3, #slide4 {
+    display: none;
+}
+
+#slide2_p1:before {
+    content: "Nowość!";
+    font-size: 0.6em;
+    background: #fff;
+    color: #000;
+    position: absolute;
+    top: -0.7em;
+    left: -0.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#slider_buttons {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    text-align: center;
+    z-index: 150;
+}
+
+.sl_button {
+    display: inline-block;
+    margin: 1px;
+    width: 17px;
+    height: 17px;
+    background: #3E2E14;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.sl_button:hover {
+    background: #8CC83D;
+}
+
+.slider_active {
+    background: #8CC83D;
+}
+
+@media screen and (max-width: 899px) {
+
+    .slide_p1 {
+        margin-left: 0;
+    }
+    .slide_p1 span{
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .slide_p2 span {
+        margin-left: 5px;
+    }
+    #slide1_img, #slide2_img2{
+        left: -40%;
+    }
+    #slide2_img{
+        left: -40%;
+    }
+    #slide1_img2, #slide2_img3{
+        left: -50%;
+    }
+}
